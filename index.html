@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trắc nghiệm DISC 24 câu</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--card:#eef4fd;--ink:#0b2a5b;--mute:#3d5a8a;--line:#b3cdee;--sel:#dbeafe;--brand:#0b3d91;--bi:#fff;--m:#0b3d91;--l:#c2410c;--D:#c0392b;--I:#b97700;--S:#2e8b57;--C:#2f6db5;--Dt:#fbe0dc;--It:#fdeebd;--St:#d9f2e3;--Ct:#d6e6fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1626;--card:#16233b;--ink:#e6eefc;--mute:#a9bddb;--line:#2d4468;--sel:#1d3358;--brand:#5b9bff;--bi:#0e1626;--m:#7fb2ff;--l:#ff9a62;--Dt:#3a1f21;--It:#3a2f14;--St:#173326;--Ct:#172c4a}}
+:root[data-theme="dark"]{--bg:#0e1626;--card:#16233b;--ink:#e6eefc;--mute:#a9bddb;--line:#2d4468;--sel:#1d3358;--brand:#5b9bff;--bi:#0e1626;--m:#7fb2ff;--l:#ff9a62;--Dt:#3a1f21;--It:#3a2f14;--St:#173326;--Ct:#172c4a}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,Arial,sans-serif;line-height:1.55}
+main{max-width:640px;margin:0 auto;padding:16px 14px 48px}
+h1{font-size:1.5rem;margin:6px 0 14px;color:var(--brand)}h2{font-size:1.1rem;margin:0 0 10px}h2:focus{outline:none}p{margin:0 0 12px}
+.mute{color:var(--mute);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.btn{font:inherit;font-weight:600;border:2px solid var(--brand);background:var(--brand);color:var(--bi);padding:12px 20px;border-radius:10px;cursor:pointer;min-height:46px}
+.btn.ghost{background:transparent;color:var(--brand)}.btn:disabled{opacity:.45;cursor:default}.btn.wide{width:100%;margin-top:8px}
+:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+.top{display:flex;justify-content:space-between;font-size:.9rem;color:var(--mute);font-weight:600}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:6px 0 14px}.bar i{display:block;height:100%;background:var(--brand);transition:width .25s}
+.row{display:grid;grid-template-columns:1fr 64px 64px;align-items:center;gap:4px;padding:9px 0;border-bottom:1px solid var(--line)}
+.row.hd{font-weight:700;font-size:.85rem;text-align:center;color:var(--mute);padding:4px 0}.row.hd span:first-child{text-align:left}.row.sel{background:var(--sel)}
+.t b{color:var(--brand)}.t{padding-right:6px}
+.rb{justify-self:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--mute);background:transparent;cursor:pointer;color:var(--bi);font:inherit;font-weight:700;font-size:1.2rem}
+.rb.m.on{background:var(--m);border-color:var(--m)}.rb.l.on{background:var(--l);border-color:var(--l)}.rb:disabled{opacity:.3;cursor:not-allowed}.rb.on::after{content:"\2713"}
+.nav{display:flex;gap:10px;margin-top:16px}.nav .btn{flex:1}
+.st{font-size:.92rem;min-height:1.4em;margin:12px 0 0;color:var(--mute)}.st.warn{color:var(--l);font-weight:600}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.chip,.tint{border-radius:10px;padding:10px 12px;background:var(--t);border-left:6px solid var(--c)}.tint{margin-bottom:8px}.tint p{margin:0}
+.chip b{display:block;font-size:1.3rem;color:var(--c)}.chip span{font-size:.85rem}
+ol{padding-left:20px;margin:0 0 12px}li{margin-bottom:6px}
+table{border-collapse:collapse;width:100%}th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:center}th:first-child,td:first-child{text-align:left}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+svg{width:100%;height:auto;display:block}.ax{stroke:var(--line)}.tx{fill:var(--mute);font-size:16px;font-family:inherit}
+.inp{font:inherit;width:100%;padding:11px 12px;border:2px solid var(--mute);border-radius:10px;margin:6px 0 8px;color:var(--ink);background:var(--bg)}
+</style></head><body><main id="app"></main>
+<script>
+var R=[
+["Cách làm việc","Duy trì nhịp độ đều, ổn định|Làm kỹ, tuân thủ quy trình|Tự quyết định và hành động nhanh|Trao đổi, thu hút mọi người cùng tham gia","SCDI"],
+["Đứng trước thử thách","Coi đó là mục tiêu cần chinh phục|Tin rằng tình huống sẽ được giải quyết ổn thỏa|Giữ bình tĩnh, kiên trì xử lý|Phân tích rủi ro trước khi hành động","DISC"],
+["Cách giao tiếp","Trình bày chính xác, có dẫn chứng|Lắng nghe nhiều hơn nói|Nói nhiều, biểu cảm phong phú|Nói thẳng, ngắn gọn vào trọng tâm","CSID"],
+["Vai trò khi họp nhóm","Tạo không khí sôi nổi|Chốt hướng đi và quyết định|Hỏi kỹ chi tiết, đối chiếu số liệu|Thúc đẩy sự đồng thuận chung","IDCS"],
+["Cách xử lý xung đột","Nhường nhịn để giữ hòa khí|Đối mặt và giải quyết trực tiếp|Xoa dịu bằng giao tiếp khéo léo|Dựa vào sự kiện và quy định","SDIC"],
+["Phản ứng trước thay đổi","Cần hiểu rõ lý do và cách thực hiện|Chủ động dẫn dắt thay đổi|Cần thời gian để thích nghi|Hào hứng đón nhận điều mới","CDSI"],
+["Cơ sở ra quyết định","Cảm hứng và trực giác|Tác động đến những người liên quan|Dữ liệu và bằng chứng|Tốc độ và sự dứt khoát","ISCD"],
+["Phản ứng khi chịu áp lực","Cứng rắn hơn, thúc đẩy mọi người|Rà soát lại từng chi tiết|Nói nhiều hơn, tìm người chia sẻ|Lặng lại, cố gắng chịu đựng","DCIS"],
+["Điều bạn theo đuổi","Sự an toàn và gắn bó|Sự công nhận từ người khác|Sự chính xác và chất lượng|Kết quả và chiến thắng","SICD"],
+["Điều khiến bạn khó chịu nhất","Sai sót do cẩu thả|Bị phớt lờ hoặc nhàm chán|Chậm chạp, kém hiệu quả|Biến động đột ngột","CIDS"],
+["Vai trò trong làm việc nhóm","Phân công và thúc đẩy tiến độ|Hỗ trợ, giữ vai trò đáng tin cậy|Kiểm soát chất lượng đầu ra|Kết nối, tạo tinh thần tích cực","DSCI"],
+["Cách tiếp nhận phản hồi","Mong được ghi nhận và khích lệ|Xem xét nhận xét có căn cứ hay không|Tiếp nhận nhẹ nhàng|Phản biện khi không đồng ý","ICSD"],
+["Khi gặp người mới","Giữ khoảng cách, quan sát trước|Đi thẳng vào vấn đề|Chủ động bắt chuyện|Thân thiện, từ tốn","CDIS"],
+["Cách học điều mới","Học cùng người khác|Thử ngay, sai thì sửa|Học từng bước, kiên nhẫn|Tìm hiểu kỹ nền tảng lý thuyết","IDSC"],
+["Phong cách thuyết trình","Nói chậm rãi, dễ theo dõi|Cấu trúc chặt chẽ, có số liệu|Kể chuyện, tương tác với khán giả|Ngắn gọn, đi thẳng đến kết luận","SCID"],
+["Phong cách lãnh đạo","Đi đầu, quyết đoán|Truyền cảm hứng cho tập thể|Làm gương bằng chuẩn mực cao|Hậu thuẫn và chăm lo đội ngũ","DICS"],
+["Môi trường làm việc lý tưởng","Sôi động, nhiều tương tác|Ổn định, hòa đồng|Nhiều thử thách, quyền tự chủ cao|Rõ ràng, có tiêu chuẩn cụ thể","ISDC"],
+["Cách dùng thời gian cuối tuần","Đọc, nghiên cứu sở thích riêng|Ở nhà cùng gia đình|Chơi thể thao, thử thách bản thân|Gặp gỡ bạn bè","CSDI"],
+["Vai trò khi tổ chức sự kiện","Điều phối tổng thể|Chu đáo với từng người tham dự|Tạo điểm nhấn cho không khí|Lập danh sách công việc chi tiết","DSIC"],
+["Cách quản lý tài chính","Tiết kiệm, ưu tiên an toàn|Chi cho trải nghiệm và niềm vui|Chấp nhận rủi ro để tăng trưởng nhanh|Lập ngân sách, theo dõi chi tiết","SIDC"],
+["Khi phát hiện sai sót của đồng nghiệp","Góp ý vui vẻ, khích lệ|Chỉ rõ chỗ sai theo tiêu chuẩn|Nói thẳng, yêu cầu sửa ngay|Giúp đỡ nhẹ nhàng","ICDS"],
+["Khi dự án trễ hạn","Tăng tốc, thúc đẩy mọi người|Rà soát để tránh sai sót|Làm việc đều, giữ bình tĩnh|Giữ vững tinh thần cả nhóm","DCSI"],
+["Điểm mạnh nổi bật nhất","Trung thành, đáng tin cậy|Bản lĩnh, kiên định|Tỉ mỉ, chính xác|Lạc quan, nhiều năng lượng","SDCI"],
+["Điểm cần cải thiện nhiều nhất","Cầu toàn quá mức|Khó duy trì tập trung|Ngại thay đổi|Nóng vội","CISD"]];
+var Q=R.map(function(r){return[r[0],r[1].split("|"),r[2]]});
+var G={D:["Dominance (Chủ động)","Quyết đoán, hướng kết quả, thích thử thách và tự chủ."],I:["Influence (Ảnh hưởng)","Nhiệt tình, giao tiếp tốt, truyền cảm hứng cho người khác."],S:["Steadiness (Ổn định)","Kiên nhẫn, đáng tin cậy, thích hòa hợp và nhịp làm việc đều đặn."],C:["Conscientiousness (Tuân thủ)","Tỉ mỉ, logic, coi trọng chất lượng, quy trình và độ chính xác."]};
+var BL={DI:["Chủ động và cuốn hút: quyết đoán, năng động, thích dẫn dắt và thuyết phục bằng nhiệt huyết.","Dám nghĩ dám làm, truyền năng lượng cho nhóm, ra quyết định nhanh.","Dễ nóng vội, có thể bỏ qua chi tiết và cảm xúc của người khác."],
+DS:["Quyết đoán nhưng bền bỉ: kiên định với mục tiêu, làm chắc từng bước, ít thích thay đổi bất ngờ.","Có hướng đi rõ ràng, đáng tin cậy, theo đuổi việc đến cùng.","Có thể cứng nhắc khi phải đổi nhanh, ít chia sẻ khó khăn của mình."],
+DC:["Quyết đoán và kỹ lưỡng: hướng kết quả, đòi hỏi chất lượng cao, phân tích rồi hành động dứt khoát.","Tư duy logic, tiêu chuẩn cao, giải quyết vấn đề hiệu quả.","Dễ khắt khe với bản thân và người khác, ít kiên nhẫn với quy trình chậm."],
+IS:["Thân thiện và ấm áp: dễ gần, biết lắng nghe, xây dựng quan hệ tốt và giữ không khí hòa hợp.","Kết nối mọi người, hỗ trợ đồng đội, tạo môi trường dễ chịu.","Ngại xung đột, khó từ chối, đôi khi thiếu quyết đoán."],
+IC:["Giao tiếp tốt và cẩn trọng: vừa thuyết phục vừa chú ý chi tiết, trình bày có cấu trúc.","Diễn đạt rõ ràng, sáng tạo nhưng có cơ sở, cân bằng cảm hứng và dữ kiện.","Có thể giằng co giữa hứng khởi và cầu toàn, dễ căng thẳng khi bị chỉ trích."],
+SC:["Kiên nhẫn và chính xác: đáng tin cậy, làm việc đều, cẩn thận, thích quy trình rõ ràng.","Ổn định, chu đáo, giữ chất lượng và sự nhất quán.","Ngại thay đổi, chần chừ khi quyết định, ít bày tỏ ý kiến cá nhân."]};
+var ORD=["D","I","S","C"],N=Q.length,app=document.getElementById("app"),ans=[],idx=0,note=false,LAST=null,KEY="disc24v2";
+function blank(){ans=[];for(var i=0;i<N;i++)ans.push({m:null,l:null})}blank();
+function sv(){try{localStorage.setItem(KEY,JSON.stringify({a:ans,i:idx}))}catch(e){}}
+function ld(){try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.a&&s.a.length===N&&s.a.some(function(a){return a.m!==null||a.l!==null}))return s}catch(e){}return null}
+function clr(){try{localStorage.removeItem(KEY)}catch(e){}}
+function start(){
+ var sd=ld(),chips=ORD.map(function(g){return'<div class="chip" style="--c:var(--'+g+');--t:var(--'+g+'t)"><b>'+g+'</b><span><strong>'+G[g][0]+'</strong><br>'+G[g][1]+'</span></div>'}).join("");
+ app.innerHTML='<h1>Trắc nghiệm hành vi DISC</h1><div class="card"><h2>DISC là gì?</h2><p>DISC là mô hình mô tả phong cách hành vi trong công việc và giao tiếp, dựa trên lý thuyết của nhà tâm lý học William Moulton Marston. Mô hình chia hành vi thành bốn nhóm:</p><div class="grid4">'+chips+'</div><p class="mute">Ai cũng có đủ bốn nhóm, chỉ khác mức độ. Kết quả cho biết nhóm nào nổi trội nhất ở bạn so với các nhóm còn lại.</p></div>'+
+ '<div class="card"><h2>Cách làm bài</h2><ol><li>Bài có <b>24 câu</b>, mỗi câu 4 phương án A, B, C, D.</li><li>Mỗi câu chọn <b>một ô Most</b> (giống bạn nhất) và <b>một ô Less</b> (ít giống bạn nhất), ở hai phương án khác nhau.</li><li>Bấm <b>Câu tiếp</b> để sang câu sau, <b>Quay lại</b> để sửa câu trước. Tiến độ được lưu trên thiết bị của bạn.</li><li>Xong câu 24, hệ thống chấm điểm và vẽ biểu đồ.</li></ol><p>Hãy trả lời theo con người thật của bạn trong công việc, theo phản xạ đầu tiên. Không có đáp án đúng hay sai. Thời gian khoảng 10 đến 15 phút.</p><p class="mute">Bộ câu hỏi tự biên soạn theo cấu trúc DISC cổ điển, chưa qua kiểm định thống kê. Chỉ dùng để tự khám phá, không dùng để tuyển dụng hay đánh giá nhân sự.</p>'+(sd?'<button class="btn wide" id="rs">Tiếp tục từ câu '+(Math.min(sd.i,N-1)+1)+'</button>':'')+'<button class="btn wide'+(sd?' ghost':'')+'" id="go">'+(sd?'Làm lại từ đầu':'Bắt đầu làm bài')+'</button></div>';
+ document.getElementById("go").onclick=function(){blank();clr();idx=0;note=false;show();window.scrollTo(0,0)};
+ if(sd)document.getElementById("rs").onclick=function(){ans=sd.a;idx=Math.min(sd.i,N-1);note=false;show();window.scrollTo(0,0)};
+}
+function status(a){var m=a.m!==null,l=a.l!==null;if(m&&l)return'Đã chọn xong. Bấm “Câu tiếp” để sang câu sau; bấm lại ô đã chọn để bỏ chọn.';if(!m&&!l)return'Chọn 1 ô Most và 1 ô Less ở hai phương án khác nhau.';return m?'Còn thiếu một ô Less ở phương án khác.':'Còn thiếu một ô Most ở phương án khác.'}
+function show(fs){
+ var q=Q[idx],a=ans[idx],p=Math.round((idx+1)/N*100),h='<div class="top"><span>Câu '+(idx+1)+' / '+N+'</span><span>'+p+'%</span></div><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+p+'" aria-label="Tiến độ"><i style="width:'+p+'%"></i></div>';
+ h+='<div class="card"><h2 id="qh" tabindex="-1">Câu '+(idx+1)+'. '+q[0]+'</h2><p class="mute">Most = giống bạn nhất • Less = ít giống bạn nhất</p><div class="row hd"><span>Phương án</span><span>Most</span><span>Less</span></div>';
+ for(var k=0;k<4;k++){var L="ABCD"[k];h+='<div class="row'+(a.m===k||a.l===k?' sel':'')+'"><div class="t"><b>'+L+'.</b> '+q[1][k]+'</div>'+
+ '<button class="rb m'+(a.m===k?' on':'')+'"'+(a.l===k?' disabled':'')+' data-t="m" data-k="'+k+'" aria-label="Phương án '+L+': Most, giống nhất" aria-pressed="'+(a.m===k)+'"></button>'+
+ '<button class="rb l'+(a.l===k?' on':'')+'"'+(a.m===k?' disabled':'')+' data-t="l" data-k="'+k+'" aria-label="Phương án '+L+': Less, ít giống nhất" aria-pressed="'+(a.l===k)+'"></button></div>'}
+ h+='<p class="st'+(note?' warn':'')+'" id="st" aria-live="polite">'+status(a)+'</p><div class="nav"><button class="btn ghost" id="back"'+(idx===0?' disabled':'')+'>Quay lại</button><button class="btn" id="next">'+(idx===N-1?'Xem kết quả':'Câu tiếp')+'</button></div></div>';
+ app.innerHTML=h;
+ [].forEach.call(app.querySelectorAll(".rb"),function(b){b.onclick=function(){pick(b.dataset.t,+b.dataset.k)}});
+ document.getElementById("back").onclick=function(){note=false;idx--;sv();show("#qh");window.scrollTo(0,0)};
+ document.getElementById("next").onclick=function(){var a=ans[idx];if(a.m===null||a.l===null){note=true;show("#next")}else if(idx===N-1)result();else{note=false;idx++;sv();show("#qh");window.scrollTo(0,0)}};
+ if(fs){var e=app.querySelector(fs);if(e)e.focus({preventScroll:true})}
+}
+function pick(t,k){var a=ans[idx],o=t==="m"?"l":"m";note=false;if(a[o]===k)a[o]=null;a[t]=a[t]===k?null:k;sv();show('.rb[data-t="'+t+'"][data-k="'+k+'"]')}
+function score(){var M={D:0,I:0,S:0,C:0},L={D:0,I:0,S:0,C:0};ans.forEach(function(a,i){M[Q[i][2][a.m]]++;L[Q[i][2][a.l]]++});return{M:M,L:L}}
+function chart(M,L){
+ var net=ORD.map(function(g){return M[g]-L[g]}),all=ORD.map(function(g){return M[g]}).concat(ORD.map(function(g){return L[g]}),net),lo=Math.floor(Math.min(0,Math.min.apply(null,all))/2)*2,hi=Math.ceil(Math.max.apply(null,all)/2)*2;
+ var W=560,H=320,pl=44,pr=16,pt=20,pb=64,x=function(i){return pl+(W-pl-pr)*(i+.5)/4},y=function(v){return pt+(H-pt-pb)*(hi-v)/(hi-lo)};
+ var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Biểu đồ đường điểm M, L và M trừ L cho bốn nhóm D, I, S, C">';
+ for(var v=lo;v<=hi;v+=2)s+='<line class="ax" x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y(v)+'" y2="'+y(v)+'"'+(v===0?' stroke-width="1.5"':'')+'/><text class="tx" x="'+(pl-8)+'" y="'+(y(v)+4)+'" text-anchor="end">'+v+'</text>';
+ ORD.forEach(function(g,i){s+='<text x="'+x(i)+'" y="'+(H-pb+24)+'" text-anchor="middle" font-size="22" font-weight="700" fill="var(--'+g+')">'+g+'</text>'});
+ [["M (giống nhất)",ORD.map(function(g){return M[g]}),"var(--m)"],["L (ít giống nhất)",ORD.map(function(g){return L[g]}),"var(--l)"],["M − L",net,"var(--I)"]].forEach(function(r,j){
+  s+='<polyline fill="none" stroke="'+r[2]+'" stroke-width="'+(j===2?3.5:2.5)+'" stroke-dasharray="'+(j===1?'6 4':'')+'" points="'+r[1].map(function(v,i){return x(i)+','+y(v)}).join(' ')+'"/>';
+  r[1].forEach(function(v,i){s+='<circle cx="'+x(i)+'" cy="'+y(v)+'" r="4.5" fill="'+r[2]+'"/>';if(j===2)s+='<text class="tx" x="'+x(i)+'" y="'+(y(v)-10)+'" text-anchor="middle" font-weight="700">'+v+'</text>'});
+  s+='<g transform="translate('+(pl+j*175)+','+(H-12)+')"><line x1="0" x2="22" y1="-4" y2="-4" stroke="'+r[2]+'" stroke-width="3" stroke-dasharray="'+(j===1?'5 3':'')+'"/><text class="tx" x="28" y="0">'+r[0]+'</text></g>'});
+ return s+'</svg>'}
+function result(){
+ var r=score(),M=r.M,L=r.L,net={};ORD.forEach(function(g){net[g]=M[g]-L[g]});
+ var rank=ORD.slice().sort(function(a,b){return net[b]-net[a]||M[b]-M[a]||ORD.indexOf(a)-ORD.indexOf(b)});
+ var r1=rank[0],r2=rank[1],pair=[r1,r2].sort(function(a,b){return ORD.indexOf(a)-ORD.indexOf(b)}).join(""),bd=BL[pair],gap=net[r1]-net[r2];
+ var nt=(gap===0?'Hai nhóm '+r1+' và '+r2+' bằng điểm M − L ('+net[r1]+'); khi hòa, nhóm có M cao hơn được xếp trước.':'Nhóm '+r1+' nổi trội hơn ('+net[r1]+' điểm) so với nhóm '+r2+' ('+net[r2]+' điểm)'+(gap>=6?'. Khoảng cách lớn nên bạn thiên rõ về '+r1+'.':'.'))+(net[r2]===net[rank[2]]?' Nhóm '+rank[2]+' cũng bằng điểm với '+r2+', nên phong cách phụ có thể là '+r2+' hoặc '+rank[2]+'.':'');
+ LAST={M:M,L:L,net:net,r1:r1,r2:r2,bd:bd,note:nt};
+ var h='<h1 id="qh" tabindex="-1">Kết quả DISC của bạn</h1><div class="card" style="text-align:center"><div class="mute">Phong cách giống bạn nhất</div><p style="font-size:3.4rem;font-weight:700;letter-spacing:.06em;margin:4px 0"><span style="color:var(--'+r1+')">'+r1+'</span><span style="color:var(--'+r2+')">'+r2+'</span></p><div><b>'+G[r1][0]+'</b> (chủ đạo) kết hợp <b>'+G[r2][0]+'</b> (hỗ trợ)</div></div>';
+ h+='<div class="card"><h2>Bạn là kiểu '+r1+r2+'</h2><p>'+bd[0]+'</p><p><b>Điểm mạnh:</b> '+bd[1]+'</p><p><b>Cần lưu ý:</b> '+bd[2]+'</p><p class="mute">'+nt+'</p></div>';
+ h+='<div class="card"><h2>Xuất báo cáo (PDF)</h2><label class="mute" for="nm">Họ tên (không bắt buộc, sẽ in lên báo cáo)</label><input class="inp" id="nm" type="text" autocomplete="name" placeholder="Nhập họ tên"><button class="btn wide" id="pdf">Tải báo cáo PDF</button><p class="st" id="pdfst" aria-live="polite"></p></div>';
+ h+='<div class="card"><h2>Biểu đồ DISC</h2>'+chart(M,L)+'</div><div class="card"><h2>Bảng chấm điểm</h2><table><tr><th>Nhóm</th><th>M</th><th>L</th><th>M − L</th></tr>';
+ ORD.forEach(function(g){h+='<tr style="background:var(--'+g+'t)"><td><span class="dot" style="background:var(--'+g+')"></span>'+g+'</td><td>'+M[g]+'</td><td>'+L[g]+'</td><td><b>'+net[g]+'</b></td></tr>'});
+ h+='</table></div><div class="card"><h2>Ý nghĩa bốn nhóm</h2>';
+ ORD.forEach(function(g){h+='<div class="tint" style="--c:var(--'+g+');--t:var(--'+g+'t)"><p><b>'+G[g][0]+'</b>: '+G[g][1]+'</p></div>'});
+ h+='<p class="mute">M cao: phong cách tự nhiên của bạn. L cao: phong cách bạn ít dùng. M − L cao: nhóm nổi trội. Điểm mang tính tương đối: mỗi người luôn có tổng M = 24 và tổng L = 24, nên kết quả cho biết thứ bậc các nhóm trong chính bạn, không dùng để so sánh điểm giữa hai người. Đây là công cụ tự khám phá, chưa qua kiểm định thống kê.</p></div><div class="nav"><button class="btn ghost" id="rev">Xem lại câu trả lời</button><button class="btn" id="again">Làm lại từ đầu</button></div>';
+ app.innerHTML=h;
+ document.getElementById("pdf").onclick=exportPdf;
+ document.getElementById("rev").onclick=function(){idx=N-1;show("#qh")};
+ document.getElementById("again").onclick=function(){blank();clr();idx=0;start();window.scrollTo(0,0)};
+ sv();window.scrollTo(0,0);document.getElementById("qh").focus({preventScroll:true});
+}
+var TT={D:"#fbe0dc",I:"#fdeebd",S:"#d9f2e3",C:"#d6e6fb"},CL={D:"#c0392b",I:"#b97700",S:"#2e8b57",C:"#2f6db5"},FN='"Be Vietnam Pro",Arial,sans-serif';
+function wrapT(c,t,x,y,w,lh){var ln="";t.split(" ").forEach(function(wd){var tt=ln?ln+" "+wd:wd;if(c.measureText(tt).width>w&&ln){c.fillText(ln,x,y);y+=lh;ln=wd}else ln=tt});if(ln){c.fillText(ln,x,y);y+=lh}return y}
+async function exportPdf(){
+ var st=document.getElementById("pdfst"),L=LAST;st.className="st";st.textContent="Đang tạo file PDF…";
+ var dl=null;try{dl=window.claude&&await window.claude.use("downloads")}catch(e){}
+ if(!dl)dl={save:function(o){var u=URL.createObjectURL(o.data),a=document.createElement("a");a.href=u;a.download=o.filename;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);return Promise.resolve()}};
+ try{
+  try{await Promise.all(["400 24px","700 24px"].map(function(f){return document.fonts.load(f+" "+FN)}))}catch(e){}
+  var nm=(document.getElementById("nm").value||"").trim(),d=new Date(),cv=document.createElement("canvas");cv.width=1240;cv.height=1754;var c=cv.getContext("2d"),y;
+  c.fillStyle="#fff";c.fillRect(0,0,1240,1754);c.fillStyle="#0b3d91";c.fillRect(0,0,1240,130);c.fillStyle="#fff";c.font="700 46px "+FN;c.textBaseline="alphabetic";c.fillText("KẾT QUẢ TRẮC NGHIỆM DISC",80,82);
+  c.fillStyle="#0b2a5b";c.font="28px "+FN;c.textAlign="left";c.fillText("Họ tên: "+(nm||"……………………………"),80,200);c.textAlign="right";c.fillText("Ngày làm: "+d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear(),1160,200);
+  c.textAlign="center";c.fillStyle="#4a628a";c.font="26px "+FN;c.fillText("Phong cách giống bạn nhất",620,290);
+  c.font="700 190px "+FN;var wa=c.measureText(L.r1).width,wb=c.measureText(L.r2).width,sx=620-(wa+wb+10)/2;c.textAlign="left";c.fillStyle=CL[L.r1];c.fillText(L.r1,sx,470);c.fillStyle=CL[L.r2];c.fillText(L.r2,sx+wa+10,470);
+  c.textAlign="center";c.fillStyle="#0b2a5b";c.font="700 30px "+FN;c.fillText(G[L.r1][0]+" (chủ đạo) + "+G[L.r2][0],620,540);
+  c.strokeStyle="#c3d6ee";c.lineWidth=2;c.beginPath();c.moveTo(80,580);c.lineTo(1160,580);c.stroke();c.textAlign="left";
+  c.font="700 34px "+FN;c.fillText("Bạn là kiểu "+L.r1+L.r2,80,640);c.font="28px "+FN;y=wrapT(c,L.bd[0],80,696,1080,42)+10;
+  c.font="700 28px "+FN;c.fillText("Điểm mạnh",80,y);c.font="28px "+FN;y=wrapT(c,L.bd[1],80,y+42,1080,42)+10;
+  c.font="700 28px "+FN;c.fillText("Cần lưu ý",80,y);c.font="28px "+FN;y=wrapT(c,L.bd[2],80,y+42,1080,42)+20;
+  c.fillStyle="#4a628a";c.font="24px "+FN;y=wrapT(c,L.note,80,y,1080,36)+30;
+  c.fillStyle="#0b3d91";c.fillRect(80,y,1080,56);c.fillStyle="#fff";c.font="700 26px "+FN;c.textAlign="center";
+  ["Nhóm","M (giống nhất)","L (ít giống nhất)","M − L"].forEach(function(t,i){c.fillText(t,[200,520,800,1060][i],y+37)});
+  ORD.forEach(function(g,i){var ry=y+56+i*64;c.fillStyle=TT[g];c.fillRect(80,ry,1080,64);c.fillStyle=CL[g];c.beginPath();c.arc(130,ry+32,10,0,7);c.fill();c.font="700 28px "+FN;c.fillText(g,200,ry+42);c.fillStyle="#0b2a5b";c.font="28px "+FN;c.fillText(L.M[g],520,ry+42);c.fillText(L.L[g],800,ry+42);c.font="700 28px "+FN;c.fillText(L.net[g],1060,ry+42)});
+  y+=56+4*72;c.textAlign="left";c.fillStyle="#4a628a";c.font="22px "+FN;
+  wrapT(c,"Lưu ý: bộ câu hỏi tự biên soạn theo cấu trúc DISC cổ điển, chưa qua kiểm định thống kê. Điểm mang tính tương đối trong từng người. Chỉ dùng để tự khám phá, không dùng để tuyển dụng hay đánh giá nhân sự.",80,y,1080,34);
+  var bl=await new Promise(function(r){cv.toBlob(r,"image/jpeg",.92)}),jp=new Uint8Array(await bl.arrayBuffer());
+  await dl.save({filename:"Ket-qua-DISC-"+L.r1+L.r2+".pdf",data:buildPdf(jp)});
+  st.textContent="Đã tạo xong file PDF. Hãy kiểm tra mục tải xuống của bạn."
+ }catch(e){st.className="st warn";st.textContent=(e&&e.code==="declined")?"Bạn đã hủy lưu file. Bấm lại nếu muốn xuất.":"Không lưu được file PDF. Bạn có thể thử lại."}
+}
+function buildPdf(j){
+ var enc=new TextEncoder(),parts=[],off=0,xr=[],cs="q 595.28 0 0 841.89 0 0 cm /Im0 Do Q";
+ function add(x){var b=typeof x==="string"?enc.encode(x):x;parts.push(b);off+=b.length}
+ function obj(i,head,s){xr[i]=off;add(i+" 0 obj\n"+head);if(s){add("\nstream\n");add(s);add("\nendstream")}add("\nendobj\n")}
+ add("%PDF-1.4\n");obj(1,"<< /Type /Catalog /Pages 2 0 R >>");obj(2,"<< /Type /Pages /Count 1 /Kids [3 0 R] >>");
+ obj(3,"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>");
+ obj(4,"<< /Length "+cs.length+" >>",enc.encode(cs));
+ obj(5,"<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length "+j.length+" >>",j);
+ var sx=off;add("xref\n0 6\n0000000000 65535 f \n");for(var k=1;k<=5;k++)add(("0000000000"+xr[k]).slice(-10)+" 00000 n \n");
+ add("trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n"+sx+"\n%%EOF");return new Blob(parts,{type:"application/pdf"})}
+start();
+</script></body></html>
